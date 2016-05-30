@@ -2,7 +2,22 @@
 layout: default
 ---
 
+<div class="post-area">
+ 	<ul>
+	    {% for post in site.posts %}
+		<li>	
+			<a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
+			<span class="post-date">{{ post.date | date_to_string }}  |  分类于<a href="{{ site.baseurl }}/category.html#{{ post.category }}" class="post-cate">{{ post.category }}</a></span>
+			
+			<p class="excerpt">
+				{% if post.excerpt %}{{ post.excerpt }}
+			    {% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}
+			    {% endif %}
+			</p>
 
-<div>
-	
+			<p class="readmore"><a href="{{ post.url }}"><span>阅读全文 &raquo;</span></a></p>
+		</li>
+		<hr>
+		{% endfor %}
+	</ul>
 </div>

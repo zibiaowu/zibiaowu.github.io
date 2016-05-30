@@ -1,6 +1,20 @@
 encoding: utf-8
+permalink: /blog/:year/:month/:title.html 
+
+# highlight: true
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# gems: [jekyll-paginate]
+paginate: 1
+paginate_path: "page:num"
+
+# date_format: "%Y-%m-%d"  # e.g. 2014-07-03
+# time_format: "%H:%M"     # 24 hour time
 
 title: Zibiao-易仙居
-description: Draw my life with code
+description: To be a romantic coder . 
 author: Zibiao Wu
 email: zibiao-xd@outlook.com

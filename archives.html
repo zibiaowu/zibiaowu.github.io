@@ -1,0 +1,21 @@
+---
+layout: default
+title: "归档 | "
+---
+
+<ul class="display-list">
+    {% for post in site.posts %} 
+		{% unless post.next %} 
+		    <p class="display-list-title"><span class="iconfont">&#xe620;</span>{{ post.date | date: '%Y' }}</p>
+		{% else %} 
+			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}  		<!-- 把post.date的值赋给year变量 -->
+			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %} 
+			{% if year != nyear %} 
+		    <p class="display-list-title"><span class="iconfont">&#xe620;</span>{{ post.date | date: '%Y' }}</p>
+		    {% endif %} 
+		{% endunless %} 
+	    <li><a href="{{ post.url }}"><i class="iconfont">&#xe620;</i>&nbsp;<b class="display-list-date">{{ post.date | date: '%Y-%m-%d' }}</b>&nbsp;{{ post.title }}</a></li>
+	{% endfor %} 
+</ul> 
+
+

@@ -5,14 +5,18 @@
 .fr{float: right;}
 .hide{display: none;}
 ul{list-style: none;}
-a{text-decoration: none;color:white;}
+a{text-decoration: none;color: black;}
 input{border: none;outline: none;}
 
-/*实现footer固定于页面底部*/
+.iconfont{font-family: iconfont;}
+
+/*default页面*/
+
+/*@@ 实现footer固定于页面底部*/
 html,body{height:100%;}
 .container{min-height:100%;position: relative;}
 .main{padding-bottom:60px;}
-/*end*/
+/*@@ end*/
 
 .topHeader{height:140px;background: rgb(245,245,245);}
 .topHeader .logo{margin:30px 0 30px 0;width: 80px;height: 80px;display: inline-block;}
@@ -23,11 +27,12 @@ html,body{height:100%;}
 
 .sidebar{background:rgb(35,35,35);position:fixed;right:-350px;top:0;bottom:0;width:350px;}
 .sidewarper{position: relative;z-index:1;text-align: center;}
-.portrait{background-image:url(../image/portrait.jpg);height:100px;width: 100px;border-radius: 50%;margin:80px 125px 30px;}
-.sidewarper p{margin: 0 auto;color:rgb(211,211,211);font-weight: bold;font-size: 20px;}
+.portrait{background-image:url(../image/portrait.jpg);height:100px;width: 100px;border-radius: 50%;margin:80px auto 30px;}
+.sidewarper p{margin: 60px auto 0;color:rgb(211,211,211);font-weight: bold;font-size: 20px;}
 .branches{display: inline-block;margin: 50px 0;border-right:1px solid rgb(50,50,50);padding: 0 10px;}
 .lastbranch{border: none;}
-.branches span{font-size:18px;font-weight:bold;color: rgb(130,130,130);padding: 5px 0;display: block;}
+.branches span{font-size:18px;font-weight: bold;color: rgb(130,130,130);padding: 5px 0;display: block;}
+.branches .biger_span{font-size:22px;font-weight: bold;}
 .branches a{display: block;}
 .branches a:hover span{color:rgb(238,238,238);}
 .links{margin-top: 50px;}
@@ -40,7 +45,50 @@ footer p{text-align: center;margin: 0 auto;line-height: 40px;}
 footer a{color: red;padding: 5px;font-weight: bold;}
 footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 
-.hide_toggle{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width:20px;position: fixed;bottom:80px;right:350px;
+.hide_toggle{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width:20px;position: fixed;bottom:50px;right:5px;
 	color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
-.back_to_top{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width: 20px;display:none;position: fixed;bottom:115px;
-	right:350px;color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
+.back_to_top{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width: 20px;display:none;position: fixed;bottom:85px;
+	right:5px;color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
+
+
+/*post页面*/
+.post-area li{margin-top: 50px;}
+.post-title{display:inline-block;line-height:40px;font-size: 35px;font-weight: bold;
+	color: rgb(55,55,55);margin-bottom: 20px;border-bottom: 2px solid white;}
+.post-title:hover{border-bottom: 2px solid black;}
+.post-date{color: rgb(159,159,159);font-size:14px;display: block;}
+.post-cate{color: rgb(159,159,159);border-bottom: 1px dotted rgb(115,115,115);margin: 2px 5px;color: rgb(115,115,115);}
+.post-cate:hover{border-bottom: 1px solid rgb(34,34,34);}
+.excerpt{margin-top:30px;}
+.readmore{margin-top: 35px;margin-bottom:60px;font-size:14px;}
+.readmore a{padding:5px 0;border-bottom: 3px solid rgb(102,102,102);color: rgb(115,115,115);}
+.readmore a:hover{color:rgb(55,55,55);border-bottom: 3px solid rgb(55,55,55);}
+
+.post-body header{text-align: center;margin-top:60px;}
+.post-body header h1{font-size:36px;line-height:36px;color: rgb(85,85,85);}
+.post-body header .post-date{margin-top:20px;}
+.post-body article{padding:60px 0;border-bottom: 1px solid rgb(238,238,238);}
+
+.pagination{margin-top:25px;}
+.pagination .changepage{font-family: iconfont;font-size: 20px;line-height: 20px;color: rgb(85,85,85);}
+.pagination .changepage:hover{color: black;}
+.pagination .changepage .page-icon{font-size: 16px;font-style: normal;}
+
+/*分类页面*/ 
+.display-list{margin: 60px 0 0 60px;}
+.display-list-title{color: rgb(85,85,85);font-size: 30px;line-height: 30px;font-weight: bold;font-family: iconfont;margin-top:30px;}
+.display-list-title span{font-size: 30px;line-height: 30px;color: rgb(85,85,85);}
+
+.display-list li a{margin-top: 20px;margin-left:20px;padding:10px 0;border-bottom: 1px dotted rgb(204,204,204);display: block;font-weight: bold;}
+.display-list li a i{color: rgb(187,187,187);}
+.display-list li a:hover{color:rgb(34,34,34);border-bottom: 1px dotted rgb(34,34,34);}
+.display-list li a:hover i{color: red;}
+.display-list-date{font-size:14px;color: rgb(34,34,34);font-weight: normal;}
+
+
+
+
+
+
+
+
