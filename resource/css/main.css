@@ -1,0 +1,46 @@
+/*公用及清格式*/
+*{padding: 0;margin: 0;}
+.comWidth{width: 1000px;margin-left: auto;margin-right: auto;}
+.fl{float: left;}
+.fr{float: right;}
+.hide{display: none;}
+ul{list-style: none;}
+a{text-decoration: none;color:white;}
+input{border: none;outline: none;}
+
+/*实现footer固定于页面底部*/
+html,body{height:100%;}
+.container{min-height:100%;position: relative;}
+.main{padding-bottom:60px;}
+/*end*/
+
+.topHeader{height:140px;background: rgb(245,245,245);}
+.topHeader .logo{margin:30px 0 30px 0;width: 80px;height: 80px;display: inline-block;}
+.topNav{display: inline-block;margin:50px 0 0 100px;vertical-align:top;}
+.topNav li{display: inline-block;padding:10px 20px;text-align: center;border-radius:20px;}
+.topNav li a{color:rgb(105,105,105);font-weight: bold;}
+.topNav li:hover,.active{background:rgb(225,225,225);}
+
+.sidebar{background:rgb(35,35,35);position:fixed;right:-350px;top:0;bottom:0;width:350px;}
+.sidewarper{position: relative;z-index:1;text-align: center;}
+.portrait{background-image:url(../image/portrait.jpg);height:100px;width: 100px;border-radius: 50%;margin:80px 125px 30px;}
+.sidewarper p{margin: 0 auto;color:rgb(211,211,211);font-weight: bold;font-size: 20px;}
+.branches{display: inline-block;margin: 50px 0;border-right:1px solid rgb(50,50,50);padding: 0 10px;}
+.lastbranch{border: none;}
+.branches span{font-size:18px;font-weight:bold;color: rgb(130,130,130);padding: 5px 0;display: block;}
+.branches a{display: block;}
+.branches a:hover span{color:rgb(238,238,238);}
+.links{margin-top: 50px;}
+.links li{display: inline-block;padding:3px;font-family: iconfont;}
+.links li a{color: rgb(120,120,120);font-weight: bold;border-bottom: 1px dotted rgb(120,120,120);padding:5px 0;}
+.links li a:hover{color:rgb(238,238,238);}
+
+footer{background: rgb(245,245,245);height:40px;bottom:0;position: absolute;width: 100%;}
+footer p{text-align: center;margin: 0 auto;line-height: 40px;}
+footer a{color: red;padding: 5px;font-weight: bold;}
+footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
+
+.hide_toggle{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width:20px;position: fixed;bottom:80px;right:350px;
+	color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
+.back_to_top{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width: 20px;display:none;position: fixed;bottom:115px;
+	right:350px;color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
