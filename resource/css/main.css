@@ -1,6 +1,6 @@
 /*公用及清格式*/
 
-.comWidth{width: 1000px;margin-left: auto;margin-right: auto;}
+.comWidth{width: 900px;margin-left: auto;margin-right: auto;}
 .fl{float: left;}
 .fr{float: right;}
 .hide{display: none;}
@@ -11,12 +11,12 @@ body {font-size:16px;word-spacing:1px;color:#000000;background-color:#ffffff;
 font-family:Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",Verdana,sans-serif;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;} 
 
-h1 {font-size: 28px;line-height: 28px;margin: 0 0 28px 0;}
-h2 {font-size: 26px;line-height: 48px;margin: 0 0 24px 0;font-weight: bold;}
-h3 {font-size: 18px;line-height: 24px;font-weight: bold;}
-h4 {font-size: 16px;line-height: 12px;font-weight: bold;}
+h1 {font-size: 28px;line-height: 28px;margin: 28px 0 28px 0;}
+h2 {font-size: 26px;line-height: 48px;margin: 24px 0 24px 0;font-weight: bold;}
+h3 {font-size: 18px;line-height: 24px;margin:20px 0 20px 0;font-weight: bold;}
+h4 {font-size: 16px;line-height: 12px;margin:16px 0 16px 0;font-weight: bold;}
 
-article p{text-indent: 2em;}
+article p{text-indent: 2em;line-height: 200%;}
 
 ul{ list-style:none;} 
 a{text-decoration: none;color: black;}
@@ -80,22 +80,27 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 
 /*index页面*/
 .post-area li{margin-top: 50px;}
+
 .post-title{display:inline-block;line-height:40px;font-size: 35px;font-weight: bold;
-	color: rgb(55,55,55);margin-bottom: 20px;border-bottom: 2px solid white;}
-.post-title:hover{border-bottom: 2px solid black;}
+	color: rgb(55,55,55);margin-bottom: 20px;}
+.post-title:hover{text-decoration:underline;}
 .post-date{color: rgb(159,159,159);font-size:14px;display: block;}
 .post-cate{color: rgb(159,159,159);border-bottom: 1px dotted rgb(115,115,115);margin: 2px 5px;color: rgb(115,115,115);}
 .post-cate:hover{border-bottom: 1px solid rgb(34,34,34);}
 .excerpt{margin-top:30px;}
-.readmore{margin-top: 35px;margin-bottom:60px;font-size:14px;}
+.readmore{margin-top: 35px;margin-bottom:30px;font-size:14px;}
 .readmore a{padding:5px 0;border-bottom: 3px solid rgb(102,102,102);color: rgb(115,115,115);}
 .readmore a:hover{color:rgb(55,55,55);border-bottom: 3px solid rgb(55,55,55);}
 
 .pagination-wraper{text-align: center;}
+
 /*post页面*/
 .post-body header{text-align: center;margin-top:60px;}
 .post-body header .post-date{margin-top:20px;}
 .post-body article{padding:40px 0;border-bottom: 1px solid rgb(238,238,238);}
+.post-body article ul{list-style:square inside; padding: 10px 20px;}
+.post-body article a{color: rgb(35,82,124);}
+.post-body article a:hover{color: rgb(35,82,255);}
 
 .changepageBar{margin-top:25px;}
 .changepageBar .changepage{font-family: iconfont;font-size: 20px;line-height: 20px;color: rgb(55,55,55);}

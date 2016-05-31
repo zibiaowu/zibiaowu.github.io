@@ -44,12 +44,12 @@ function reloc() {
 	 	 hide_toggle = document.getElementById("hide_toggle"),
 	 	 Swid = document.body.offsetWidth;
 
-	 if ((Swid > 1100) && (hide_toggle.title == "展开个人信息")) {		//当屏幕宽度很小时，隐藏右侧固定栏
+	 if ((Swid > 950) && (hide_toggle.title == "展开个人信息")) {		//当屏幕宽度很小时，隐藏右侧固定栏
 	 	fix_toggle.style.display = 'block';
 	 	sidebar.style.display = 'block';
 	 	sidebar.style.left = Swid + "px";
 	 	container.style.width = [Swid - (Swid - sidebar.offsetLeft)] + "px";
-	 } else if((Swid > 1100) && (hide_toggle.title == "隐藏个人信息")){
+	 } else if((Swid > 950) && (hide_toggle.title == "隐藏个人信息")){
 	 	fix_toggle.style.display = 'block';
 	 	sidebar.style.display = 'block';
 	 	sidebar.style.left = (Swid - 350) + "px";
