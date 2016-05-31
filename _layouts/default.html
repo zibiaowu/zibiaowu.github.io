@@ -4,17 +4,20 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>{{ page.title }} {{ site.title }}</title>
-
+	
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/css/main.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/css/pygments.css">
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/iconfont/iconfont.css">
 	<link rel="shortout icon" href="{{ site.baseurl }}/resource/image/Blog.png">
 	
 	<script type="text/javascript" src="{{ site.baseurl }}/resource/js/main.js"></script>
 </head>
 <body>
-<div class="container" id="container">
+<div class="all-container" id="container">
 	<header class="topHeader">
 		<div class="comWidth">
 			<a class="logo" href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/resource/image/Blog.png" width="80" height="80"></a>
@@ -54,10 +57,10 @@
 						</a>	
 					</div>
 
-					<ul class="links">
-						<li><a href="https://github.com/zibiaowu">&#xe61d;GitHub</a></li>
-						<li><a href="">&#xe61e;Email</a></li>
-						<li><a href="http://weibo.com/1956991773/profile?topnav=1&wvr=6&is_all=1">&#xe61c;Weibo</a></li>
+					<ul class="links iconfont">
+						<li><a href="https://github.com/zibiaowu" target="_blank">&#xe61d;GitHub</a></li>
+						<li><a href="" target="_blank">&#xe61e;Email</a></li>
+						<li><a href="http://weibo.com/1956991773/profile?topnav=1&wvr=6&is_all=1" target="_blank">&#xe61c;Weibo</a></li>
 					</ul>
 				</div>
 			</aside>
@@ -70,8 +73,8 @@
     </footer>
 
 	<div class="fix_toggle" id="fix_toggle">
-		<span class="hide_toggle" title="隐藏个人信息" id="hide_toggle">&#xe61a;</span>
-		<span class="back_to_top" id="back_top" title="回到顶部">&#xe615;</span>
+		<span class="hide_toggle iconfont" title="隐藏个人信息" id="hide_toggle">&#xe61a;</span>
+		<span class="back_to_top iconfont" id="back_top" title="回到顶部">&#xe615;</span>
 	</div>
 </div>
 </body>

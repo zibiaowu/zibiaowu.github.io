@@ -1,17 +1,17 @@
 var scrollTop,winWidth,bodyHeight,winHeight;
 
 //获得浏览器窗口当前宽度
-function getWinWidth(){
-	if (window.innerWidth){
-		winWidth = window.innerWidth;	
-		winHeight = window.innerHeight; 	
-	 }
-	 else if ((document.body) && (document.body.clientWidth)){
-	 	winWidth = document.body.clientWidth; 
-	 	winHeight = document.body.clientHeight;
-	 }
-	 return winWidth;
-}
+// function getWinWidth(){
+// 	if (window.innerWidth){
+// 		winWidth = window.innerWidth;	
+// 		winHeight = window.innerHeight; 	
+// 	 }
+// 	 else if ((document.body) && (document.body.clientWidth)){
+// 	 	winWidth = document.body.clientWidth; 
+// 	 	winHeight = document.body.clientHeight;
+// 	 }
+// 	 return winWidth;
+// }
 
 //事件绑定与移除
 function addHandler (element,type,handler) {
@@ -42,7 +42,7 @@ function reloc() {
 	 	 fix_toggle = document.getElementById("fix_toggle"),
 	 	 sidebar = document.getElementById("sidebar"),
 	 	 hide_toggle = document.getElementById("hide_toggle"),
-	 	 Swid = getWinWidth();
+	 	 Swid = document.body.offsetWidth;
 
 	 if ((Swid > 1100) && (hide_toggle.title == "展开个人信息")) {		//当屏幕宽度很小时，隐藏右侧固定栏
 	 	fix_toggle.style.display = 'block';
@@ -81,7 +81,7 @@ function SidebarToggle(){
 		targetR = sidebar.offsetLeft + 350,
 		targetL = sidebar.offsetLeft - 350,
 		timer = null,
-		Swid = getWinWidth();
+		Swid = document.body.offsetWidth;
 
 		if(hide_toggle.title == "展开个人信息"){		//展开个人信息面板
 			hide_toggle.innerHTML = "&#xe61a;";
@@ -112,7 +112,7 @@ function SidebarToggle(){
 					clearInterval(timer);
 				}
 				sidebar.style.left = (sidebar.offsetLeft - speed) + 'px';
-				container.style.width = [getWinWidth() - (getWinWidth() - sidebar.offsetLeft)] + "px";
+				container.style.width = [document.body.offsetWidth - (document.body.offsetWidth - sidebar.offsetLeft)] + "px";
 			}, 30);
 		}
 }

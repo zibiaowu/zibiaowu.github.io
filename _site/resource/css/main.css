@@ -1,23 +1,51 @@
 /*公用及清格式*/
-*{padding: 0;margin: 0;}
+
 .comWidth{width: 1000px;margin-left: auto;margin-right: auto;}
 .fl{float: left;}
 .fr{float: right;}
 .hide{display: none;}
-ul{list-style: none;}
+/*.iconfont{font-family: iconfont;}*/
+
+html{color:#000;background:#FFF;}
+body {font-size:16px;word-spacing:1px;color:#000000;background-color:#ffffff;
+font-family:Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",Verdana,sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;} 
+
+h1 {font-size: 28px;line-height: 28px;margin: 0 0 28px 0;}
+h2 {font-size: 26px;line-height: 48px;margin: 0 0 24px 0;font-weight: bold;}
+h3 {font-size: 18px;line-height: 24px;font-weight: bold;}
+h4 {font-size: 16px;line-height: 12px;font-weight: bold;}
+
+article p{text-indent: 2em;}
+
+ul{ list-style:none;} 
 a{text-decoration: none;color: black;}
+a:hover{text-decoration: none;}
 input{border: none;outline: none;}
 
-.iconfont{font-family: iconfont;}
+pre {font-family: "Courier 10 Pitch", Courier, monospace;font-size: 95%;line-height: 140%;
+white-space: pre;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -o-pre-wrap;}       
+
+code {font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;font-size: 95%;line-height: 140%;
+white-space: pre;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -o-pre-wrap;background: #faf8f0;}
+
+table{border-top:2px solid #777;border-bottom: 2px solid #777;margin: 8px 0;}
+table thead{border-bottom: 1px dashed #777;background-color: #aaa;color:#fff;}
+table th{padding: 2px 10px;}
+table tr:nth-child(2n){background-color: #E5EAED;}
+table td{padding: 2px 10px;vertical-align: top;}
+
+/*em,strong{color: red;}*/
 
 /*default页面*/
 
 /*@@ 实现footer固定于页面底部*/
 html,body{height:100%;}
-.container{min-height:100%;position: relative;}
-.main{padding-bottom:60px;}
+.all-container{min-height:100%;position: relative;}
+.main,.content{padding-bottom:60px;}
 /*@@ end*/
 
+/*顶部导航*/
 .topHeader{height:140px;background: rgb(245,245,245);}
 .topHeader .logo{margin:30px 0 30px 0;width: 80px;height: 80px;display: inline-block;}
 .topNav{display: inline-block;margin:50px 0 0 100px;vertical-align:top;}
@@ -31,7 +59,7 @@ html,body{height:100%;}
 .sidewarper p{margin: 60px auto 0;color:rgb(211,211,211);font-weight: bold;font-size: 20px;}
 .branches{display: inline-block;margin: 50px 0;border-right:1px solid rgb(50,50,50);padding: 0 10px;}
 .lastbranch{border: none;}
-.branches span{font-size:18px;font-weight: bold;color: rgb(130,130,130);padding: 5px 0;display: block;}
+.branches span{font-size:16px;color: rgb(130,130,130);padding: 5px 0;display: block;}
 .branches .biger_span{font-size:22px;font-weight: bold;}
 .branches a{display: block;}
 .branches a:hover span{color:rgb(238,238,238);}
@@ -41,17 +69,16 @@ html,body{height:100%;}
 .links li a:hover{color:rgb(238,238,238);}
 
 footer{background: rgb(245,245,245);height:40px;bottom:0;position: absolute;width: 100%;}
-footer p{text-align: center;margin: 0 auto;line-height: 40px;}
+footer p{text-align: center;line-height:40px;}
 footer a{color: red;padding: 5px;font-weight: bold;}
 footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 
-.hide_toggle{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width:20px;position: fixed;bottom:50px;right:5px;
-	color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
-.back_to_top{font-family: iconfont;font-size:20px;line-height:20px;height:20px;width: 20px;display:none;position: fixed;bottom:85px;
-	right:5px;color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
+.hide_toggle{line-height:20px;position: fixed;bottom:55px;right:15px;color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
+.back_to_top{line-height:20px;display:none;position: fixed;bottom:90px;right:15px;color: white;background:rgb(35,35,35);padding:5px;cursor: pointer;}
 
+.pagination{margin: 0 auto;}
 
-/*post页面*/
+/*index页面*/
 .post-area li{margin-top: 50px;}
 .post-title{display:inline-block;line-height:40px;font-size: 35px;font-weight: bold;
 	color: rgb(55,55,55);margin-bottom: 20px;border-bottom: 2px solid white;}
@@ -64,15 +91,16 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 .readmore a{padding:5px 0;border-bottom: 3px solid rgb(102,102,102);color: rgb(115,115,115);}
 .readmore a:hover{color:rgb(55,55,55);border-bottom: 3px solid rgb(55,55,55);}
 
+.pagination-wraper{text-align: center;}
+/*post页面*/
 .post-body header{text-align: center;margin-top:60px;}
-.post-body header h1{font-size:36px;line-height:36px;color: rgb(85,85,85);}
 .post-body header .post-date{margin-top:20px;}
-.post-body article{padding:60px 0;border-bottom: 1px solid rgb(238,238,238);}
+.post-body article{padding:40px 0;border-bottom: 1px solid rgb(238,238,238);}
 
-.pagination{margin-top:25px;}
-.pagination .changepage{font-family: iconfont;font-size: 20px;line-height: 20px;color: rgb(85,85,85);}
-.pagination .changepage:hover{color: black;}
-.pagination .changepage .page-icon{font-size: 16px;font-style: normal;}
+.changepageBar{margin-top:25px;}
+.changepageBar .changepage{font-family: iconfont;font-size: 20px;line-height: 20px;color: rgb(55,55,55);}
+.changepageBar .changepage:hover{color: black;}
+.changepageBar .changepage .page-icon{font-size: 16px;font-style: normal;}
 
 /*分类页面*/ 
 .display-list{margin: 60px 0 0 60px;}

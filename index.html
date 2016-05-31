@@ -4,10 +4,10 @@ layout: default
 
 <div class="post-area">
  	<ul>
-	    {% for post in site.posts %}
+	    {% for post in paginator.posts %}
 		<li>	
 			<a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-			<span class="post-date">{{ post.date | date_to_string }}  |  分类于<a href="{{ site.baseurl }}/category.html#{{ post.category }}" class="post-cate">{{ post.category }}</a></span>
+			<span class="post-date">{{ post.date | date: "%Y-%m-%d" }}  |  分类于<a href="{{ site.baseurl }}/category.html#{{ post.category }}" class="post-cate">{{ post.category }}</a></span>
 			
 			<p class="excerpt">
 				{% if post.excerpt %}{{ post.excerpt }}
@@ -20,4 +20,31 @@ layout: default
 		<hr>
 		{% endfor %}
 	</ul>
+	
+	<div class="pagination-wraper">
+		<ul class="pagination pagination-lg">
+			<!-- 上一页按钮 -->
+			{% if paginator.previous_page %}
+		    	<li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="上一页">&laquo;</a></li>
+			{% endif %}
+			
+			{% for page in (1..paginator.total_pages) %}
+				<!-- 当前页用span标签，无链接 -->
+			    {% if page == paginator.page %}
+			      <li class="active"><span>{{ page }}</span></li>
+			    <!-- 第一页链接指向首页 -->
+			    {% elsif page == 1 %}
+			      <li><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+			    <!-- 其他页码指向相应页码的链接 -->
+			    {% else %}
+			      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+			    {% endif %}
+			{% endfor %}
+			
+			<!-- 下一页按钮 -->
+			{% if paginator.next_page %}
+			    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="下一页">&raquo;</a></li>
+			{% endif %}
+		</ul>
+	</div>
 </div>
