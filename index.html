@@ -7,7 +7,7 @@ layout: default
 	    {% for post in paginator.posts %}
 		<li>	
 			<a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-			<span class="post-date">{{ post.date | date: "%Y-%m-%d" }}  |  分类于<a href="{{ site.baseurl }}/category.html#{{ post.category }}" class="post-cate">{{ post.category }}</a></span>
+			<span class="post-date">{{ post.date | date: "%Y-%m-%d" }}  |  分类于<a href="/category/index.html#{{ post.category }}" class="post-cate">{{ post.category }}</a></span>
 			
 			<p class="excerpt">
 				{% if post.excerpt %}{{ post.excerpt }}

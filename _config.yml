@@ -5,7 +5,7 @@ kramdown:
   input: GFM
 
 highlighter: rouge
-
+baseurl: /
 paginate: 5
 
 # excerpt_separator: "\n\n"

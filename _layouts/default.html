@@ -8,23 +8,23 @@
 
 	<title>{{ page.title }} {{ site.title }}</title>
 	
-	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/css/main.css">
-	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/css/pygments.css">
-	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resource/iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/resource/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/resource/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/resource/css/pygments.css">
+	<link rel="stylesheet" type="text/css" href="/resource/iconfont/iconfont.css">
 	<link rel="shortout icon" href="{{ site.baseurl }}/resource/image/Blog.png">
 	
-	<script type="text/javascript" src="{{ site.baseurl }}/resource/js/main.js"></script>
+	<script type="text/javascript" src="/resource/js/main.js"></script>
 </head>
 <body>
 <div class="all-container" id="container">
 	<header class="topHeader">
 		<div class="comWidth">
-			<a class="logo" href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/resource/image/Blog.png" width="80" height="80"></a>
+			<a class="logo" href="index.html"><img src="/resource/image/Blog.png" width="80" height="80"></a>
 			<ul class="topNav">
-				<li><a href="{{ site.baseurl }}/index.html">首页</a>  <!-- 不写li结束标签是为了解决inline-block元素之间的空格解析 -->
-				<li><a href="{{ site.baseurl }}/category.html">分类</a>
-				<li><a href="{{ site.baseurl }}/archives.html">归档</a>
+				<li><a href="/index.html">首页</a>  <!-- 不写li结束标签是为了解决inline-block元素之间的空格解析 -->
+				<li><a href="/category/index.html">分类</a>
+				<li><a href="/archives/index.html">归档</a>
 				<li><a href="###">关于</a></li>	<!-- 最后一个li的结束标签要写上，是为了兼容IE6 -->
 			</ul>
 		</div>
@@ -41,12 +41,12 @@
 					<div class="portrait"></div>
 					<p>落花无痕，流水有意。</p>
 					<div class="branches">
-						<a href="{{ site.baseurl }}/archives.html">
+						<a href="/archives/index.html">
 							<span class="biger_span">{{ site.posts | size }}</span>
 							<span>文章</span>
 						</a>	
 					</div><div class="branches">
-						<a href="{{ site.baseurl }}/category.html">
+						<a href="/category/index.html">
 							<span class="biger_span">{{ site.categories | size }}</span>
 							<span>分类</span>
 						</a>	
