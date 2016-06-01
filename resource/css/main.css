@@ -1,20 +1,20 @@
 /*公用及清格式*/
 
-.comWidth{width: 900px;margin-left: auto;margin-right: auto;}
+.comWidth{width: 900px;margin-left: auto;margin-right: auto;background-color: rgba(255,255,255,0.8);}
 .fl{float: left;}
 .fr{float: right;}
 .hide{display: none;}
-/*.iconfont{font-family: iconfont;}*/
 
-html{color:#000;background:#FFF;}
+/*
+html{color:#000;background:#FFF;}*/
 body {font-size:16px;word-spacing:1px;color:#000000;background-color:#ffffff;
 font-family:Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",Verdana,sans-serif;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;} 
 
-h1 {font-size: 28px;line-height: 28px;margin: 28px 0 28px 0;}
-h2 {font-size: 26px;line-height: 48px;margin: 24px 0 24px 0;font-weight: bold;}
-h3 {font-size: 18px;line-height: 24px;margin:20px 0 20px 0;font-weight: bold;}
-h4 {font-size: 16px;line-height: 12px;margin:16px 0 16px 0;font-weight: bold;}
+h1 {font-size: 28px;line-height: 28px;padding: 28px 0 28px 0;}
+h2 {font-size: 26px;line-height: 48px;padding: 24px 0 24px 0;font-weight: bold;}
+h3 {font-size: 18px;line-height: 24px;padding:20px 0 20px 0;font-weight: bold;}
+h4 {font-size: 16px;line-height: 12px;padding:16px 0 16px 0;font-weight: bold;}
 
 article p{text-indent: 2em;line-height: 200%;}
 
@@ -41,12 +41,15 @@ table td{padding: 2px 10px;vertical-align: top;}
 
 /*@@ 实现footer固定于页面底部*/
 html,body{height:100%;}
+body{background-image: url(../image/bg.jpg);background-attachment:fixed;background-repeat: no-repeat;}
+
 .all-container{min-height:100%;position: relative;}
-.main,.content{padding-bottom:60px;}
+.main,.content{padding-bottom:45px;}
 /*@@ end*/
 
 /*顶部导航*/
 .topHeader{height:140px;background: rgb(245,245,245);}
+.topHeader .comWidth{background: rgb(245,245,245);}
 .topHeader .logo{margin:30px 0 30px 0;width: 80px;height: 80px;display: inline-block;}
 .topNav{display: inline-block;margin:50px 0 0 100px;vertical-align:top;}
 .topNav li{display: inline-block;padding:10px 20px;text-align: center;border-radius:20px;}
@@ -79,7 +82,8 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 .pagination{margin: 0 auto;}
 
 /*index页面*/
-.post-area li{margin-top: 50px;}
+
+.post-area{margin-top: 5px;padding: 40px 40px 0;}
 
 .post-title{display:inline-block;line-height:40px;font-size: 35px;font-weight: bold;
 	color: rgb(55,55,55);margin-bottom: 20px;}
@@ -95,12 +99,13 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 .pagination-wraper{text-align: center;}
 
 /*post页面*/
-.post-body header{text-align: center;margin-top:60px;}
+.post-body{padding:0 40px 0;}
+.post-body header{text-align: center;padding-top:40px;}
 .post-body header .post-date{margin-top:20px;}
 .post-body article{padding:40px 0;border-bottom: 1px solid rgb(238,238,238);}
-.post-body article ul{list-style:square inside; padding: 10px 20px;}
-.post-body article a{color: rgb(35,82,124);}
-.post-body article a:hover{color: rgb(35,82,255);}
+.post-body ul{list-style:square inside; padding: 10px 20px;}
+.post-body a{color: rgb(35,82,124);}
+.post-body a:hover{color: rgb(35,82,255);}
 
 .changepageBar{margin-top:25px;}
 .changepageBar .changepage{font-family: iconfont;font-size: 20px;line-height: 20px;color: rgb(55,55,55);}
@@ -108,8 +113,8 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 .changepageBar .changepage .page-icon{font-size: 16px;font-style: normal;}
 
 /*分类页面*/ 
-.display-list{margin: 60px 0 0 60px;}
-.display-list-title{color: rgb(85,85,85);font-size: 30px;line-height: 30px;font-weight: bold;font-family: iconfont;margin-top:30px;}
+.display-list{padding: 30px 30px 0 60px;margin-top: 5px;}
+.display-list-title{color: rgb(85,85,85);font-size: 30px;line-height: 30px;font-weight: bold;font-family: iconfont;padding-top:30px;}
 .display-list-title span{font-size: 30px;line-height: 30px;color: rgb(85,85,85);}
 
 .display-list li a{margin-top: 20px;margin-left:20px;padding:10px 0;border-bottom: 1px dotted rgb(204,204,204);display: block;font-weight: bold;}

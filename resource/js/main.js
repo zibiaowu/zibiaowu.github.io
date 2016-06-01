@@ -13,6 +13,14 @@ var scrollTop,winWidth,bodyHeight,winHeight;
 // 	 return winWidth;
 // }
 
+//网站背景图片适配屏幕大小
+function bodyBGSize() {
+ 	 /* body... */ 
+ 	 var Swid = document.body.offsetWidth,
+ 	 	 Shei = document.body.offsetHeight;
+ 	 document.body.style.backgroundSize = Swid + "px " + Shei + "px";
+ }
+
 //事件绑定与移除
 function addHandler (element,type,handler) {
 	 // body...  
@@ -124,7 +132,9 @@ window.onload = function() {
 	    backTop = document.getElementById("back_top");
 	    
 	reloc();
+	bodyBGSize();
 
+	addHandler(window,"resize",bodyBGSize);
 	addHandler(window,"resize",reloc);
 
 	addHandler(hide_toggle,"mouseover",function(){		//固定栏展开个人信息切换
