@@ -41,7 +41,7 @@ body{background-image: url(../image/bg.jpg);background-attachment:fixed;backgrou
 html,body{height:100%;}
 
 .all-container{min-height:100%;position: relative;}
-.main,.content{padding-bottom:80px;}
+.main,.content{padding-bottom:75px;}
 /*@@ end*/
 
 /*顶部导航*/
@@ -68,7 +68,7 @@ html,body{height:100%;}
 .links li a{color: rgb(120,120,120);font-weight: bold;border-bottom: 1px dotted rgb(120,120,120);padding:5px 0;}
 .links li a:hover{color:rgb(238,238,238);}
 
-footer{background: rgb(245,245,245);height:70px;bottom:0;position: absolute;width: 100%;padding:10px 0;}
+footer{background: rgb(245,245,245);height:72px;bottom:0;position: absolute;width: 100%;padding:10px 0;}
 footer p{text-align: center;line-height:30px;}
 footer a{color: red;padding: 5px;font-weight: bold;}
 footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
@@ -96,13 +96,15 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 .pagination-wraper{text-align: center;}
 
 /*post页面*/
-.post-body{padding:0 40px 0;}
+.post-body{padding:3px 40px 50px;}
 .post-body header{text-align: center;padding-top:40px;}
 .post-body header .post-date{margin-top:20px;}
 .post-body article{padding:40px 0;border-bottom: 1px solid rgb(238,238,238);}
 .post-body ul{list-style:square inside; padding: 10px 20px;}
 .post-body a{color: rgb(35,82,124);}
 .post-body a:hover{color: rgb(35,82,255);}
+
+.ds-thread{padding: 20px 40px 0;}
 
 .changepageBar{margin-top:25px;}
 .changepageBar .changepage{font-family: iconfont;font-size: 20px;line-height: 20px;color: rgb(55,55,55);}
