@@ -5,7 +5,7 @@ category: css
 
 ---
 
-## 一.现象描述
+# 一、现象描述
 真正意义上的inline-block水平呈现的元素间，换行显示或空格分隔的情况下会有间距，很简单的个例子：
 
 {% highlight html %}
@@ -37,7 +37,7 @@ category: css
 
 这类间距有时会对我们布局，或是兼容性处理产生影响，需要去掉它，该怎么办呢？以下展示N种方法（欢迎补充）！
 
-## 二、方法之移除空格
+# 二、方法之移除空格
 
 元素间留白间距出现的原因就是标签段之间的空格，因此，去掉HTML中的空格，自然间距就木有了。考虑到代码可读性，显然连成一行的写法是不可取的，我们可以：
 
@@ -71,7 +71,7 @@ category: css
 {% endhighlight %}
 	
 
-## 三、使用margin负值
+# 三、使用margin负值
 
 {% highlight css %}
 .space a {
@@ -87,7 +87,7 @@ margin负值的大小与上下文的字体和文字大小相关，其中，间�
 
 [1]: http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/
 
-## 四、让闭合标签吃胶囊
+# 四、让闭合标签吃胶囊
 
 {% highlight html %}
 <div class="space">
@@ -109,7 +109,7 @@ margin负值的大小与上下文的字体和文字大小相关，其中，间�
 </div>
 {% endhighlight %}
 
-## 五、使用font-size:0
+# 五、使用font-size:0
 
 {% highlight css %}
 .space {
@@ -132,7 +132,7 @@ margin负值的大小与上下文的字体和文字大小相关，其中，间�
 
 不过目前Chrome浏览器已经取消了最小字体限制。因此，上面的`-webkit-text-size-adjust:none;`代码估计时日不多了。
 
-## 六、使用letter-spacing
+# 六、使用letter-spacing
 
 {% highlight css %}
 .space {
@@ -145,7 +145,7 @@ margin负值的大小与上下文的字体和文字大小相关，其中，间�
 
 该方法可以搞定基本上所有浏览器，包括吃“东鞋”、“西毒(胶囊)”、“南地(沟油)”、“北钙(三鹿)”的IE6/IE7浏览器，不过Opera浏览器下有蛋疼的问题：最小间距1像素，然后，`letter-spacing`再小就还原了。
 
-## 七、使用word-spacing
+# 七、使用word-spacing
 
 {% highlight css %}
 .space {
@@ -166,7 +166,7 @@ margin负值的大小与上下文的字体和文字大小相关，其中，间�
 }
 {% endhighlight %}
 
-## 八、其他成品方法
+# 八、其他成品方法
 下面展示的是**YUI 3 CSS Grids** 使用`letter-spacing`和`word-spacing`去除格栅单元见间隔方法（注意，其针对的是block水平的元素，因此对IE8-浏览器做了hack处理）：
 
 {% highlight css %}
