@@ -23,6 +23,116 @@ layout: default
 	</div>
 </div>
 
+<script type="text/javascript">
+	/*
+创建博客目录，
+postid表示包含博文正文的div容器的id，
+menuid表示存放博文目录的div容器的id
+mt 和 st 分别表示主标题和次级标题的标签名称（如 H2、H3，大写或小写都可以！），
+*/
+function createBlogDirectory(postid, menuid,mt, st){
+     //获取博文正文和存放目录的div容器
+    var elem = document.getElementById(postid);
+    var dirBox = document.getElementById(menuid);
+    if(!elem || !dirBox) return false;
+
+    //获取div中所有元素结点
+    var nodes = elem.getElementsByTagName("*");
+    //创建博客目录的div容器
+    var divSideBar = document.createElement('DIV');
+    divSideBar.className = 'sideBarDirectory';
+    divSideBar.setAttribute('id', 'sideBarDirectory');
+    var divSideBarContents = document.createElement('DIV');
+    // divSideBarContents.style.display = 'none';
+    divSideBarContents.setAttribute('id', 'sideBarContents');
+    divSideBar.appendChild(divSideBarContents);
+    //创建自定义列表
+    var dlist = document.createElement("dl");
+    divSideBarContents.appendChild(dlist);
+    var num = 0;//统计找到的mt和st
+    mt = mt.toUpperCase();//转化成大写
+    st = st.toUpperCase();//转化成大写
+    //遍历所有元素结点
+    for(var i=0; i<nodes.length; i++)
+    {
+        if(nodes[i].nodeName == mt || nodes[i].nodeName == st)    
+        {
+            //获取标题文本
+            var nodetext = nodes[i].innerHTML.replace(/<\/?[^>]+>/g,"");//innerHTML里面的内容可能有HTML标签，所以用正则表达式去除HTML的标签
+            nodetext = nodetext.replace(/&nbsp;/ig, "");//替换掉所有的&nbsp;
+            // nodetext = BlogDirectory.htmlDecode(nodetext);
+            //插入锚        
+            nodes[i].setAttribute("id", "blogTitle" + num);
+            var item;
+            switch(nodes[i].nodeName)
+            {
+                case mt:    //若为主标题 
+                    item = document.createElement("dt");
+                    break;
+                case st:    //若为子标题
+                    item = document.createElement("dd");
+                    break;
+            }
+            
+            //创建锚链接
+            var itemtext = document.createTextNode(nodetext);
+            item.appendChild(itemtext);
+            item.setAttribute("name", num);
+            item.onclick = function(){        //添加鼠标点击触发函数
+                var pos = document.getElementById("blogTitle" + this.getAttribute("name")).offsetTop;
+            	scrollTo(pos);
+            };            
+            
+            //将自定义表项加入自定义列表中
+            dlist.appendChild(item);
+            num++;
+        }
+    }
+    if(num == 0){
+    	var item = document.createElement("p");
+    	var itemtext = document.createTextNode("此篇文章没有目录");
+    	item.appendChild(itemtext);
+    	dlist.appendChild(item);
+    }
+
+	// 在存放目录容器中新建导航
+    var sidebarNav = document.createElement('ul');
+    sidebarNav.className = "sidebar-nav";
+	var sidebarNavList1 = document.createElement('li');
+	var sidebarNavList2 = document.createElement('li');
+	sidebarNavList1.innerHTML = "文章目录";
+	sidebarNavList2.innerHTML = "站点概览";
+	sidebarNav.appendChild(sidebarNavList1);
+	sidebarNav.appendChild(sidebarNavList2);
+	
+	// 将导航节点插入到站点概览节点之前，并将目录节点插入，前后无所谓，因为目录节点和站点节点只会显示其一
+    var sidePer = document.getElementById("sidebar-Person");
+    dirBox.insertBefore(sidebarNav, sidePer);
+    dirBox.appendChild(divSideBar);
+
+    sidebarNavList1.className = "sidebar-nav-toc-active" ;
+    sidebarNavList2.className = "sidebar-nav-toc";
+    sidePer.style.display = 'none' ; 
+
+    sidebarNavList1.onclick = function () {
+    	 /* body... */ 
+    	 sidebarNavList1.className = "sidebar-nav-toc-active" ;
+    	 sidebarNavList2.className = "sidebar-nav-toc" ;
+    	 sidePer.style.display = 'none' ; 
+    	 divSideBar.style.display = 'block';
+    }
+    sidebarNavList2.onclick = function () {
+    	 /* body... */ 
+    	 sidebarNavList2.className = "sidebar-nav-toc-active" ;
+    	 sidebarNavList1.className = "sidebar-nav-toc" ;
+    	 sidePer.style.display = 'block' ; 
+    	 divSideBar.style.display = 'none';
+    }		
+} 
+
+createBlogDirectory("post_main","sidebar","h1","h2");
+</script>
+
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}"></div>
 <!-- 多说评论框 end -->

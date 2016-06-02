@@ -34,16 +34,7 @@
 
 	<div class="main">
 		<div class="comWidth">
-			<div class="content">
-				{{ content }}
-			</div>
-
 			<aside class="sidebar" id="sidebar">
-				<ul class="sidebar-nav">
-					<li class="sidebar-nav-toc" id="sidebar-nav-1">文章目录</li>
-					<li class="sidebar-nav-toc" id="sidebar-nav-2">站点概览</li>
-				</ul>
-
 				<div class="sidewarper" id="sidebar-Person">
 					<div class="portrait"></div>
 					<p>落花无痕，流水有意。</p>
@@ -66,15 +57,19 @@
 
 					<ul class="links iconfont">
 						<li><a href="https://github.com/zibiaowu" target="_blank">&#xe61d;GitHub</a></li>
-						<li><a href="" target="_blank">&#xe61e;Email</a></li>
+						<li><a href="/about/index.html#Email">&#xe61e;Email</a></li>
 						<li><a href="http://weibo.com/1956991773/profile?topnav=1&wvr=6&is_all=1" target="_blank">&#xe61c;Weibo</a></li>
 					</ul>
 				</div>
 			</aside>
 
+			<div class="content">
+				{{ content }}
+			</div>
+			
 		</div>
 	</div>
-	
+
 	<footer id="footer">
         {% include copyright.html %}
     </footer>
