@@ -56,6 +56,7 @@ html,body{height:100%;}
 .topNav li a{color:rgb(105,105,105);font-weight: bold;}
 .topNav li:hover,.active{background:rgb(225,225,225);}
 
+.searchForm{display: inline-block;}
 .SearchIcon{display:inline-block;line-height: 17px;margin-right: -17px;position: relative;z-index: 1;/*font-weight: bold;*/}
 .topSearch{width: 180px;background: rgb(245,245,245);border-bottom: 2px solid rgb(199,199,199);display:inline-block;line-height: 17px;padding:2px 0 2px 20px;}
 .topSearch:focus{border-bottom: 2px solid rgb(34,34,34);}
