@@ -30,6 +30,18 @@
 					<li><a href="/about/index.html">关于</a></li>	<!-- 最后一个li的结束标签要写上，是为了兼容IE6 -->
 				</ul>
 
+			<script type="text/javascript">
+			(function(){
+				document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
+				var bdcs = document.createElement('script');
+				bdcs.type = 'text/javascript';
+				bdcs.async = true;
+				bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=11990796991200480138' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(bdcs, s);
+			})();
+			</script>
+			
 				<span class="iconfont SearchIcon" id="SearchIcon">&#xe60c;</span><input id="bdcsMain" class="topSearch iconfont" type="text" />
 
 			</nav>
@@ -98,15 +110,5 @@
 	<!-- 多说公共JS代码 end -->
 </div>
 
-	<script type="text/javascript">
-	(function(){
-		document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
-		var bdcs = document.createElement('script');
-		bdcs.type = 'text/javascript';
-		bdcs.async = true;
-		bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=11990796991200480138' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(bdcs, s);})();
-	</script>
 </body>
 </html>
