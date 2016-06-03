@@ -51,11 +51,14 @@ html,body{height:100%;}
 .topHeader{height:140px;background: rgb(245,245,245);}
 .topHeader .comWidth{background: rgb(245,245,245);}
 .topHeader .logo{margin:30px 0 30px 0;width: 80px;height: 80px;display: inline-block;}
-.topNav{display: inline-block;margin:50px 0 0 100px;vertical-align:top;}
+.topNav{display: inline-block;margin:50px 180px 0 100px;vertical-align:top;}
 .topNav li{display: inline-block;padding:10px 20px;text-align: center;border-radius:20px;}
 .topNav li a{color:rgb(105,105,105);font-weight: bold;}
 .topNav li:hover,.active{background:rgb(225,225,225);}
 
+.SearchIcon{display:inline-block;line-height: 17px;margin-right: -17px;position: relative;z-index: 1;/*font-weight: bold;*/}
+.topSearch{width: 180px;background: rgb(245,245,245);border-bottom: 2px solid rgb(199,199,199);display:inline-block;line-height: 17px;padding:2px 0 2px 20px;}
+.topSearch:focus{border-bottom: 2px solid rgb(34,34,34);}
 
 .sidebar{background:rgb(35,35,35);position:fixed;right:-350px;top:0;bottom:0;width:350px;}
 /*博客目录及个人简介切换*/

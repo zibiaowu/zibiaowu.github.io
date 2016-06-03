@@ -149,6 +149,7 @@ function SidebarToggle(){
 window.onload = function() {
 	 /* body... */ 
 	var	hide_toggle = document.getElementById("hide_toggle"),	
+		searchInput = document.getElementById("bdcsMain"),
 	    backTop = document.getElementById("back_top");
 	scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
 
@@ -175,7 +176,18 @@ window.onload = function() {
 			backTop.style.display='none';
 		}
 	});
+	
+	addHandler(searchInput,"focus",function () {
+		 /* body... */ 
+		 var searchIcon = document.getElementById("SearchIcon");
+		 searchIcon.style.fontWeight = 'bold';
+	});
 
+	addHandler(searchInput,"blur",function () {
+		 /* body... */ 
+		 var searchIcon = document.getElementById("SearchIcon");
+		 searchIcon.style.fontWeight = 'normal';
+	})
 	addHandler(backTop,"click",backTopFun);
 
 	reloc();
