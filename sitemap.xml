@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://zibiaowu.github.io/</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://zibiaowu.github.io/index.html</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://zibiaowu.github.io/category/index.html</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://zibiaowu.github.io/archives/index.html</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://zibiaowu.github.io/about/index.html</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://zibiaowu.github.io/2016/06/01/remove-inline-block-margin/</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://zibiaowu.github.io/2016/06/01/JS-notes-1/</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://zibiaowu.github.io/2016/05/31/Welcome-To-YiXianJu/</loc>
+  <lastmod>2016-06-03T07:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>

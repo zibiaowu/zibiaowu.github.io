@@ -18,7 +18,7 @@ function bodyBGSize() {
  	 /* body... */ 
  	 var Swid = document.body.offsetWidth,
  	 	 Shei = document.body.offsetHeight;
- 	 document.body.style.backgroundSize = Swid + "px " + Shei + "px";
+ 	 document.body.style.backgroundSize = Swid + "px " + "," +Shei + "px";
  }
 
 //事件绑定与移除
@@ -73,26 +73,34 @@ function reloc() {
 	 // body...  
 	 var footer = document.getElementById("footer"),
 	 	 container = document.getElementById("container"),
+	 	 headerW = document.getElementById("headerW"),
+	 	 mainW = document.getElementById("mainW"),
 	 	 fix_toggle = document.getElementById("fix_toggle"),
 	 	 sidebar = document.getElementById("sidebar"),
 	 	 hide_toggle = document.getElementById("hide_toggle"),
 	 	 Swid = document.body.offsetWidth;
 
-	 if ((Swid > 950) && (hide_toggle.title == "展开个人信息")) {
-	 	fix_toggle.style.display = 'block';
+	 if (Swid > 950) {
+	 	hide_toggle.style.display = 'block';
 	 	sidebar.style.display = 'block';
-	 	sidebar.style.left = Swid + "px";
-	 	fix_toggle.style.left = (sidebar.offsetLeft - 32) + "px";
-	 	container.style.width = [Swid - (Swid - sidebar.offsetLeft)] + "px";
-	 } else if((Swid > 950) && (hide_toggle.title == "隐藏个人信息")){
-	 	fix_toggle.style.display = 'block';
-	 	sidebar.style.display = 'block';
-	 	sidebar.style.left = (Swid - 350) + "px";
-	 	fix_toggle.style.left = (sidebar.offsetLeft - 32) + "px";
-	 	container.style.width = [Swid - (Swid - sidebar.offsetLeft)] + "px";
+	 	mainW.style.width = 900 +'px';
+	 	headerW.style.width = 900 + 'px';
+	 	if(hide_toggle.title == "展开个人信息"){
+		 	sidebar.style.left = Swid + "px";
+	 		fix_toggle.style.left = (sidebar.offsetLeft - 32) + "px";
+		 	container.style.width = [Swid - (Swid - sidebar.offsetLeft)] + "px";
+	 	}
+	 	if(hide_toggle.title == "隐藏个人信息"){
+	 		sidebar.style.left = (Swid - 350) + "px";
+	 		fix_toggle.style.left = (sidebar.offsetLeft - 32) + "px";
+	 		container.style.width = [Swid - (Swid - sidebar.offsetLeft)] + "px";
+	 	}
 	 }else {
-	 	fix_toggle.style.display = 'none';
+	 	hide_toggle.style.display = 'none';
 	 	sidebar.style.display = 'none';
+	 	fix_toggle.style.left = (Swid - 32)+ 'px';
+	 	mainW.style.width = Swid + 'px';
+	 	headerW.style.width = Swid + 'px';
 	 	container.style.width = Swid + "px";
 	 }
 }
@@ -150,6 +158,7 @@ window.onload = function() {
 	 /* body... */ 
 	var	hide_toggle = document.getElementById("hide_toggle"),	
 		searchInput = document.getElementById("bdcsMain"),
+		navtoggle = document.getElementById("navtoggle"),
 	    backTop = document.getElementById("back_top");
 	scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
 
@@ -157,6 +166,19 @@ window.onload = function() {
 
 	addHandler(window,"resize",bodyBGSize);
 	addHandler(window,"resize",reloc);
+
+	addHandler(navtoggle,"click",function () {
+		 /* body... */ 
+		 var mobilenav = document.getElementById("mobilenav");
+		 var condition = mobilenav.style.display;
+		 if(condition == 'inline-block'){		 	
+		 	mobilenav.style.display = 'none';
+		 	navtoggle.style.backgroundColor = '#F5F5F5';
+		 }else {
+			mobilenav.style.display = 'inline-block';
+			navtoggle.style.backgroundColor = '#E1E1E1';
+		}
+	});
 
 	addHandler(hide_toggle,"mouseover",function(){		//固定栏展开个人信息切换
 			if(this.title != "隐藏个人信息")

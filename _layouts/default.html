@@ -10,9 +10,9 @@
 	<title>{{ page.title }} {{ site.title }}</title>
 	
 	<link rel="stylesheet" type="text/css" href="/resource/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/resource/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/resource/css/pygments.css">
 	<link rel="stylesheet" type="text/css" href="/resource/iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/resource/css/main.css">
 	<link rel="shortout icon" href="/resource/image/Blog.png">
 	
 	<script type="text/javascript" src="/resource/js/main.js"></script>
@@ -20,26 +20,41 @@
 <body>
 <div class="all-container" id="container">
 	<header class="topHeader">
-		<div class="comWidth">
+		<div class="comWidth" id="headerW">
 			<nav>
-				<a class="logo" href="/index.html" title="回到首页"><img src="/resource/image/Blog.png" width="80" height="80" alt="易仙居logo"></a>
+				<a class="logo" href="/index.html" title="回到首页"><img src="/resource/image/yixianju.png" width="100" height="50" alt="易仙居logo"></a>
 				<ul class="topNav">
 					<li><a href="/index.html">首页</a>  <!-- 不写li结束标签是为了解决inline-block元素之间的空格解析 -->
 					<li><a href="/category/index.html">分类</a>
 					<li><a href="/archives/index.html">归档</a>
 					<li><a href="/about/index.html">关于</a></li>	<!-- 最后一个li的结束标签要写上，是为了兼容IE6 -->
 				</ul>
-
-			<form class="searchForm">
-				<span class="iconfont SearchIcon" id="SearchIcon">&#xe60c;</span><input id="bdcsMain" class="topSearch iconfont" type="text" />
-			</form>
-
+				
+				<div class="hidenavBox fr">
+					<span class="topnavtoggle iconfont" id="navtoggle">&#xe61b;</span>
+					<div class="mobilenav-wraper" id="mobilenav">
+						<ul class="mobileNav">
+							<li><a href="/index.html">首页</a></li>
+							<li><a href="/category/index.html">分类</a></li>
+							<li><a href="/archives/index.html">归档</a></li>
+							<li><a href="/about/index.html">关于</a></li>
+						</ul>
+						<form class="hidesearchForm">
+							<span class="iconfont SearchIcon" id="SearchIcon">&#xe60c;</span><input id="bdcsMain" class="topSearch iconfont" type="text" />
+						</form>
+					</div>
+					
+				</div>
+				
+				<form class="searchForm" id="searchForm">
+					<span class="iconfont SearchIcon" id="SearchIcon">&#xe60c;</span><input id="bdcsMain" class="topSearch iconfont" type="text" />
+				</form>
 			</nav>
 		</div>
 	</header>
 
 	<div class="main">
-		<div class="comWidth">
+		<div class="comWidth" id="mainW">
 			<aside class="sidebar" id="sidebar">
 				<div class="sidewarper" id="sidebar-Person">
 					<div class="portrait"></div>
