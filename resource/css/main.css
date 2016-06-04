@@ -159,13 +159,11 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 	.topNav{display: none;}
 	.hidenavBox{margin:40px 20px 10px 0;display: inline-block;}
 	.mobilenav-wraper{display: none;position: absolute;left: 20px;}
-	.hidesearchForm{display: inline-block;background: rgb(225,225,225);padding:5px 10px 10px;}
 	.topnavtoggle{display: inline-block;font-size:45px;width:60px;height:60px;padding:0 7px 15px 8px;cursor: pointer;margin:0 0 5px 40px;}
 	.topnavtoggle:hover{background: rgb(225,225,225);}
-	.mobileNav{padding:15px 30px 5px;background: rgb(225,225,225);border: 1px solid rgb(215,215,215);}
+	.mobileNav{padding:15px 30px 15px;background: rgb(225,225,225);border: 1px solid rgb(215,215,215);width:100px;}
 	.mobileNav li{text-align:center;border-bottom: 1px dotted rgb(225,225,225);margin: 3px 0;}
 	.mobileNav li:hover{border-bottom: 1px solid black;}
-	.topSearch{width:80px;background: rgb(225,225,225);}
 
 	.topHeader .logo{margin:45px 0 0 30px;}
 	.post-area{margin-top: 5px;padding: 20px 10px 0;}

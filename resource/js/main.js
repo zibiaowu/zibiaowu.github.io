@@ -192,7 +192,7 @@ window.onload = function() {
 			navtoggle.style.backgroundColor = '#E1E1E1';
 		}
 	});
-
+	
 	// 屏幕宽度很小时，启用媒体查询，将头部导航条折叠，当点击屏幕其他地方时，将导航条折叠。
 	addHandler(window,"click",function () {
 		 /* body... */ 
