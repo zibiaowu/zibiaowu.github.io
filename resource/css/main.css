@@ -16,7 +16,7 @@ h2 {font-size: 22px;line-height: 22px;padding: 22px 0 22px 0;font-weight: bold;}
 h3 {font-size: 18px;line-height: 18px;padding:18px 0 18px 0;font-weight: bold;}
 
 /*h1,h2标题会被博客目录JS所收集，此标题大小与h2一样，但是不会被JS收集*/
-h4 {font-size: 24px;line-height: 22px;padding:22px 0 22px 0;font-weight: bold;}
+h4 {font-size: 24px;line-height: 24px;padding:24px 0 24px 0;font-weight: bold;}
 
 article p{text-indent: 2em;line-height: 200%;}
 
@@ -64,37 +64,6 @@ html,body{height:100%;}
 .topSearch{width: 180px;background: rgb(245,245,245);border-bottom: 2px solid rgb(199,199,199);display:inline-block;line-height: 17px;padding:2px 0 2px 20px;}
 .topSearch:focus{border-bottom: 2px solid rgb(34,34,34);}
 
-@media screen and (max-width:830px) and (min-width:670px){
-	.searchForm{margin: 60px 10px 0 0;float: right;}
-	.topSearch{width:150px;}
-	.topHeader .logo{float: left;}
-	.topNav{float:left;margin:50px 10px 0 60px;}}
-
-@media screen and (max-width:670px) and (min-width: 490px){
-	.topNav{float: right;margin:50px 30px 0 0;}
-	.searchForm{display: none;}}
-
-@media screen and (max-width:490px) and (min-width:365px){
-	.searchForm{display: none;}
-	.topHeader .logo{margin:45px 10px 0 20px;}
-	.topNav{float: right;margin: 50px 0 0 10px;}
-	.topNav li{padding:10px 10px;}}
-
-@media screen and (max-width: 365px){
-	.searchForm{display: none;}
-	.topNav{display: none;}
-	.hidenavBox{margin:40px 20px 10px 0;display: inline-block;}
-	.mobilenav-wraper{display: none;position: absolute;left: 20px;}
-	.hidesearchForm{display: inline-block;background: rgb(225,225,225);padding:5px 10px 10px;}
-	.topnavtoggle{display: inline-block;font-size:45px;width:60px;height:60px;padding:0 7px 15px 8px;cursor: pointer;margin:0 0 5px 40px;}
-	.topnavtoggle:hover{background: rgb(225,225,225);}
-	.mobileNav{padding:15px 30px 5px;background: rgb(225,225,225);border: 1px solid rgb(215,215,215);}
-	.mobileNav li{text-align:center;border-bottom: 1px dotted rgb(225,225,225);margin: 3px 0;}
-	.mobileNav li:hover{border-bottom: 1px solid black;}
-	.topSearch{width:80px;background: rgb(225,225,225);}
-
-}
-
 .sidebar{background:rgb(35,35,35);position:fixed;right:-350px;top:0;bottom:0;width:350px;}
 /*博客目录及个人简介切换*/
 .sidebar-nav{margin:50px auto;width: 170px;}
@@ -134,7 +103,6 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 .pagination{margin: 0 auto;}
 
 /*index页面*/
-
 .post-area{margin-top: 5px;padding: 40px 40px 0;}
 
 .post-title{display:inline-block;line-height:40px;font-size: 35px;font-weight: bold;
@@ -179,7 +147,38 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 
 
 
+@media screen and (max-width:850px) and (min-width:685px){
+	.searchForm{margin: 60px 10px 0 0;float: right;}
+	.topSearch{width:150px;}
+	.topHeader .logo{float: left;}
+	.topNav{float:left;margin:50px 10px 0 60px;}
+}
 
+@media screen and (max-width: 685px){
+	.searchForm{display: none;}
+	.topNav{display: none;}
+	.hidenavBox{margin:40px 20px 10px 0;display: inline-block;}
+	.mobilenav-wraper{display: none;position: absolute;left: 20px;}
+	.hidesearchForm{display: inline-block;background: rgb(225,225,225);padding:5px 10px 10px;}
+	.topnavtoggle{display: inline-block;font-size:45px;width:60px;height:60px;padding:0 7px 15px 8px;cursor: pointer;margin:0 0 5px 40px;}
+	.topnavtoggle:hover{background: rgb(225,225,225);}
+	.mobileNav{padding:15px 30px 5px;background: rgb(225,225,225);border: 1px solid rgb(215,215,215);}
+	.mobileNav li{text-align:center;border-bottom: 1px dotted rgb(225,225,225);margin: 3px 0;}
+	.mobileNav li:hover{border-bottom: 1px solid black;}
+	.topSearch{width:80px;background: rgb(225,225,225);}
+
+	.topHeader .logo{margin:45px 0 0 30px;}
+	.post-area{margin-top: 5px;padding: 20px 10px 0;}
+	.display-list{padding: 0 10px 0 10px;margin-top: 5px;}
+	
+	body{font-size: 12px;}
+	h1 {font-size: 18px;line-height: 18px;padding: 18px 0 18px 0;font-weight: bold;}
+	h2 {font-size: 16px;line-height: 16px;padding: 16px 0 16px 0;font-weight: bold;}
+	h3 {font-size: 14px;line-height: 14px;padding:14px 0 14px 0;font-weight: bold;}
+	/*h1,h2标题会被博客目录JS所收集，此标题大小与h2一样，但是不会被JS收集*/
+	h4 {font-size: 16px;line-height: 16px;padding:16px 0 16px 0;font-weight: bold;}
+
+}
 
 
 

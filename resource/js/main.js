@@ -21,6 +21,16 @@ function bodyBGSize() {
  	 document.body.style.backgroundSize = Swid + "px " + "," +Shei + "px";
  }
 
+//取消事件冒泡
+function stopPropagation(e) {  
+    e = e || window.event;  
+    if(e.stopPropagation) { //W3C阻止冒泡方法  
+        e.stopPropagation();  
+    } else {  
+        e.cancelBubble = true; //IE阻止冒泡方法  
+    }  
+}  
+
 //事件绑定与移除
 function addHandler (element,type,handler) {
 	 // body...  
@@ -167,10 +177,13 @@ window.onload = function() {
 	addHandler(window,"resize",bodyBGSize);
 	addHandler(window,"resize",reloc);
 
-	addHandler(navtoggle,"click",function () {
+	addHandler(navtoggle,"click",function (e) {
 		 /* body... */ 
 		 var mobilenav = document.getElementById("mobilenav");
 		 var condition = mobilenav.style.display;
+
+		 stopPropagation(e);
+
 		 if(condition == 'inline-block'){		 	
 		 	mobilenav.style.display = 'none';
 		 	navtoggle.style.backgroundColor = '#F5F5F5';
@@ -178,6 +191,15 @@ window.onload = function() {
 			mobilenav.style.display = 'inline-block';
 			navtoggle.style.backgroundColor = '#E1E1E1';
 		}
+	});
+
+	// 屏幕宽度很小时，启用媒体查询，将头部导航条折叠，当点击屏幕其他地方时，将导航条折叠。
+	addHandler(window,"click",function () {
+		 /* body... */ 
+		 var navtoggle = document.getElementById("navtoggle");
+		 var mobilenav = document.getElementById("mobilenav");
+		 mobilenav.style.display = 'none';
+		 navtoggle.style.backgroundColor = '#F5F5F5';
 	});
 
 	addHandler(hide_toggle,"mouseover",function(){		//固定栏展开个人信息切换
