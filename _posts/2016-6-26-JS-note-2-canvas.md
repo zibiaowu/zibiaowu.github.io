@@ -11,7 +11,7 @@ title: Javascripy学习笔记二——canvas绘图
 
 我先在HTML中设置好canvas的大小：
 
-	<canvas id="mycanv" width="300" height="200" style="background-color:black;">请升级您的浏览器吧！</canvas>
+	<canvas id="mycanv" width="300" height="200" style="background-color:black;"></canvas>
 
 正常显示，没有问题。
 
@@ -19,30 +19,36 @@ title: Javascripy学习笔记二——canvas绘图
 
 再来，我用CSS设置画布的大小：
 
+{% highlight HTML %}
 	<style type="text/css">
 		#mycanv{background-color: black;width: 300px;height: 200px;}
 	</style>
 	
-	<canvas id="mycanv">请升级您的浏览器吧！</canvas>
+	<canvas id="mycanv"></canvas>
+{% endhighlight %}
 
-这时候，问题就来了，可以看到坦克被放大了，这个例子里我的画布大小设置的比较小，当画布很大时，效果更明显，大家可以自己尝试。这就是上面说到的**奇怪的效果。**
+这时候，问题就来了，虽然从浏览器调试窗口看画布大小仍然为`300*200`，但是可以看到坦克被放大了，这个例子里我的画布大小设置的比较小，当画布很大时，效果更明显，大家可以自己尝试。这就是上面说到的**奇怪的效果**。
 
 ![css](/resource/image/2016-6-26(2).png)
 
 最后是用JS来设置画布大小，有两种情况：
 
+{% highlight javascript %}
 	var can = document.getElementById("mycanv");
 
 	can.width = 800;
 	can.height = 600; 
+{% endhighlight %}
 
 这种方法和第一种直接在HTML里设置是一样的，即正常效果。
 还有一种情况：
 
+{% highlight javascript %}
 	var can = document.getElementById("mycanv");
 
 	can.style.width = 300 + 'px';
 	can.style.height = 200 + 'px';
+{% endhighlight %}
 
 这是一种类CSS的指定大小的方式，所以和CSS直接指定是一样的效果，同样产生了不必要的缩放效果。
 所以，最好的方式是直接在HTML里设置画布的大小，简单粗暴。
@@ -85,7 +91,7 @@ title: Javascripy学习笔记二——canvas绘图
 以上两个方法都以下面三个属性为基础:
 - `font`表示文本样式，和CSS中指定文本样式一致；
 - `textAlign`文本对齐方式，包括`start`,`end`,`left`,`right`,`center`,影响x的位置。如`start`表示从x值处开始绘制，`center`表示x值为文本的中心;
-- `textBaseline`包括`top`,``middle`,`bottom`,影响y的位置。`top`y坐标表示文本顶端位置。
+- `textBaseline`包括`top`,`middle`,`bottom`,影响y的位置。`top`y坐标表示文本顶端位置。
 
 # 变换
 - `rotate(angle)`围绕原点旋转angle弧度；
@@ -97,12 +103,13 @@ title: Javascripy学习笔记二——canvas绘图
 # 绘制图像
 
 - `draImage(image,x,y)`在（x,y）处绘制image图像；
-- `drawImage(image,x,y,width,height)`在（x,y）处绘制大小为width*height的图像；
-- `drawImage(image,x,y,width,height,X,Y,WIDTH,HEIGHT)`把image图像从（x,y）开始的大小为width*height的图像绘制到上下文中（X,Y）开始的大小为WIDTH*HEIGHT的图像。
+- `drawImage(image,x,y,width,height)`在（x,y）处绘制大小为`width*height`的图像；
+- `drawImage(image,x,y,width,height,X,Y,WIDTH,HEIGHT)`把image图像从（x,y）开始的大小为`width*height`的图像绘制到上下文中（X,Y）开始的大小为`WIDTH*HEIGHT`的图像。
 
 # 合成
 
 - `globalAlpha`介于0到1之间，用于指定所有绘制的透明度，默认值为0；
+
 - `globalCompositionOperation`表示后绘制的图形怎样与先绘制的图形结合。包括以下值：
 
 
@@ -132,6 +139,7 @@ title: Javascripy学习笔记二——canvas绘图
 
 如上图所示，我们的坦克基本上是由三个矩形和一个圆形一个线段组成，每个部件的尺寸进行了标记，单位为px,下面我们用上面讲到的内容来画出我们的坦克，注意：我们在画坦克的时候应该选择一个参考点，这里我们选择的是坦克的左上角。
 
+	{% highlight javascript %}
 	<canvas id="tankMap" width="400px" height="300px" style="background-color:black"></canvas>
 	<script type="text/javascript">
 		//得到画布
@@ -164,3 +172,4 @@ title: Javascripy学习笔记二——canvas绘图
 		cxt.closePath();
 		cxt.stroke();
 	</script>
+	{% endhighlight %}
