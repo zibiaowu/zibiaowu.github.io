@@ -126,6 +126,7 @@ footer a:hover{background: rgb(113,113,113);border-radius: 8px;}
 .post-body header .post-date{margin-top:20px;}
 .post-body article{padding:40px 0;border-bottom: 1px solid rgb(238,238,238);}
 .post-body ul{list-style:square inside; padding: 10px 20px;}
+.post-body ol{padding: 10px 20px;}
 .post-body a{color: rgb(35,82,124);}
 .post-body a:hover{color: rgb(35,82,255);}
 
