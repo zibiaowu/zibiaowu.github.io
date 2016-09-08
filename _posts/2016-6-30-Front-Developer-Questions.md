@@ -466,6 +466,16 @@ title: 前端常见面试题
 
 	3. `ev.stopPropagation();`（旧ie的方法 `ev.cancelBubble = true;`）
 
+	**补充**：
+
+	- w3c的绑定事件函数`addEventListener(event,function,useCapture)`的最后一个参数默认是`false`，表示事件在冒泡阶段触发，`true`表示在捕获阶段触发。
+
+	- 不同浏览器处理事件流是不一样的，IE下只支持事件冒泡，而其他大部分浏览器都是同时支持事件冒泡和捕获的。
+
+	- 关于事件，可参考此文章：[浏览器中关于事件的那点事儿][30]
+
+	[30]:http://kb.cnblogs.com/page/199251/
+
 - ### 什么是闭包（closure），为什么要用它？
 
 	闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。
@@ -497,11 +507,20 @@ title: 前端常见面试题
 
 - ### js延迟加载的方式有哪些？
 
-	1. defer，只支持 IE
+	1. defer，给`<script>`标签加上`defer='defer'`属性，仅 IE 支持
 
-	2. async
+	2. async，H5新属性。且仅适用于外部脚本（只有在使用 src 属性时）
 
 	3. 创建 script，插入到 DOM 中，加载完毕后 callBack
+
+	**TIPS**： 
+
+	- 如果 async="async"：JS异步加载，加载完毕后立刻异步执行，不能保证脚本按顺序执行。
+	
+	- 如果不使用 async 且 defer="defer"：JS异步下载，dom结构解析完(标签 + 样式(内容不一定下载完))才异步执行	 
+
+	- 如果既不使用 async 也不使用 defer：在浏览器继续解析页面之前，立即读取并执行脚本 ，可能会阻塞DOM的构建
+
 
 - ### 同步和异步的区别?
 
@@ -518,7 +537,10 @@ title: 前端常见面试题
 
 	这里有一篇文章非常详细：[浅谈web跨域的实现][26]。
 
+	另外，关于jsonp的原理，看这里:[说说JSON和JSONP][31]
+
 	[26]:http://www.cnblogs.com/vajoy/p/4295825.html
+	[31]:http://www.cnblogs.com/dowinning/archive/2012/04/19/json-jsonp-jquery.html
 
 - ### `documen.write`和 `innerHTML`的区别?
 
